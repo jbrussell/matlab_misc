@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding="utf-8"?>
+<toc version="2.0">
+<!-- First tocitem specifies top level in Help browser Contents pane -->
+<!-- This can be a roadmap page, as shown below, or a content page -->
+
+    <tocitem target="text.html">Matlab Seismic Anisotropy Toolkit
+        <!-- Nest tocitems to create hierarchical entries in  Contents-->
+        <!-- To include icons, use the following syntax for tocitems: -->
+        <!-- <tocitem target="foo.html" image="HelpIcon.NAME"> -->
+        <!-- Title-of-Section </tocitem> -->
+        <!-- where NAME is one of the following (use capital letters): -->
+        <!-- FUNCTION, USER_GUIDE, EXAMPLES, BLOCK, GETTING_STARTED, -->
+        <!-- DEMOS, RELEASE_NOTES --> 
+        <!-- Icon images used for these entries are also stored in -->
+        <!-- matlabroot/toolbox/matlab/icons -->
+        <!-- A Getting Started Guide usually comes first -->
+        <tocitem target="MSATstart.html" image="$toolbox/matlab/icons/greenarrowicon.gif">Getting Started</tocitem>
+        <tocitem target="MSATguide.html" image="$toolbox/matlab/icons/bookicon.gif">User Guide
+            <tocitem target="MSATfunctions.html" image="$toolbox/matlab/icons/bookicon.gif">Functions and theory</tocitem>
+            <tocitem target="MSATdevelop.html" image="$toolbox/matlab/icons/bookicon.gif">Development tips</tocitem>
+            <tocitem target="MSATreadme.html" image="$toolbox/matlab/icons/bookicon.gif">Installation and licensing</tocitem>
+        </tocitem>
+        <tocitem target="./examples/index.html" image="$toolbox/matlab/icons/demoicon.gif">examples
+            <tocitem target="./examples/loading_examples.html" image="$toolbox/matlab/icons/demoicon.gif">Example 1: Loading data</tocitem>
+            <tocitem target="./examples/diopside_example.html" image="$toolbox/matlab/icons/demoicon.gif">Example 2: Analysis of single crystal elasticity</tocitem>
+            <tocitem target="./examples/texture_example.html" image="$toolbox/matlab/icons/demoicon.gif">Example 3: Texture analysis and MTEX</tocitem>
+            <tocitem target="./examples/lmm_anisotropy_example.html" image="$toolbox/matlab/icons/demoicon.gif">Example 4: Lowermost mantle anisotropy</tocitem>
+            <tocitem target="./examples/splitting_model_example.html" image="$toolbox/matlab/icons/demoicon.gif">Example 5: Modelling shear-wave splitting variation with backazimuth</tocitem>
+            <tocitem target="./examples/splitting_misfit_example.html" image="$toolbox/matlab/icons/demoicon.gif">Example 6: Measuring and using shear-wave splitting misfit</tocitem>
+            <tocitem target="./examples/topotaxy_example.html" image="$toolbox/matlab/icons/demoicon.gif">Example 7: Modelling texture inheritance between post-perovskite and perovskite</tocitem>
+        </tocitem>
+        <tocitem target="MSATrelease_notes.html" image="$toolbox/matlab/icons/notesicon.gif">Release notes</tocitem>
+	<tocitem target="./funcs/index.html" image="$toolbox/matlab/icons/help_fx.png">Functions 
+
+        <tocitem target="./funcs/MS_TI.html" image="$toolbox/matlab/icons/help_fx.png">MS_TI</tocitem>
+        <tocitem target="./funcs/MS_TI_parameters.html" image="$toolbox/matlab/icons/help_fx.png">MS_TI_parameters</tocitem>
+        <tocitem target="./funcs/MS_VRH.html" image="$toolbox/matlab/icons/help_fx.png">MS_VRH</tocitem>
+        <tocitem target="./funcs/MS_VTI.html" image="$toolbox/matlab/icons/help_fx.png">MS_VTI</tocitem>
+        <tocitem target="./funcs/MS_VTI2.html" image="$toolbox/matlab/icons/help_fx.png">MS_VTI2</tocitem>
+        <tocitem target="./funcs/MS_Vrot3.html" image="$toolbox/matlab/icons/help_fx.png">MS_Vrot3</tocitem>
+        <tocitem target="./funcs/MS_anisotropy.html" image="$toolbox/matlab/icons/help_fx.png">MS_anisotropy</tocitem>
+        <tocitem target="./funcs/MS_axes.html" image="$toolbox/matlab/icons/help_fx.png">MS_axes</tocitem>
+        <tocitem target="./funcs/MS_build_isotropic.html" image="$toolbox/matlab/icons/help_fx.png">MS_build_isotropic</tocitem>
+        <tocitem target="./funcs/MS_checkC.html" image="$toolbox/matlab/icons/help_fx.png">MS_checkC</tocitem>
+        <tocitem target="./funcs/MS_cij2cijkl.html" image="$toolbox/matlab/icons/help_fx.png">MS_cij2cijkl</tocitem>
+        <tocitem target="./funcs/MS_cijkl2cij.html" image="$toolbox/matlab/icons/help_fx.png">MS_cijkl2cij</tocitem>
+        <tocitem target="./funcs/MS_decomp.html" image="$toolbox/matlab/icons/help_fx.png">MS_decomp</tocitem>
+        <tocitem target="./funcs/MS_effective_medium.html" image="$toolbox/matlab/icons/help_fx.png">MS_effective_medium</tocitem>
+        <tocitem target="./funcs/MS_effective_splitting_N.html" image="$toolbox/matlab/icons/help_fx.png">MS_effective_splitting_N</tocitem>
+        <tocitem target="./funcs/MS_elasticDB.html" image="$toolbox/matlab/icons/help_fx.png">MS_elasticDB</tocitem>
+        <tocitem target="./funcs/MS_expand.html" image="$toolbox/matlab/icons/help_fx.png">MS_expand</tocitem>
+        <tocitem target="./funcs/MS_info.html" image="$toolbox/matlab/icons/help_fx.png">MS_info</tocitem>
+        <tocitem target="./funcs/MS_interpolate.html" image="$toolbox/matlab/icons/help_fx.png">MS_interpolate</tocitem>
+        <tocitem target="./funcs/MS_iso.html" image="$toolbox/matlab/icons/help_fx.png">MS_iso</tocitem>
+        <tocitem target="./funcs/MS_list.html" image="$toolbox/matlab/icons/help_fx.png">MS_list</tocitem>
+        <tocitem target="./funcs/MS_load.html" image="$toolbox/matlab/icons/help_fx.png">MS_load</tocitem>
+        <tocitem target="./funcs/MS_load_list.html" image="$toolbox/matlab/icons/help_fx.png">MS_load_list</tocitem>
+        <tocitem target="./funcs/MS_make_trace.html" image="$toolbox/matlab/icons/help_fx.png">MS_make_trace</tocitem>
+        <tocitem target="./funcs/MS_measure_trace_splitting.html" image="$toolbox/matlab/icons/help_fx.png">MS_measure_trace_splitting</tocitem>
+        <tocitem target="./funcs/MS_norms.html" image="$toolbox/matlab/icons/help_fx.png">MS_norms</tocitem>
+        <tocitem target="./funcs/MS_phasevels.html" image="$toolbox/matlab/icons/help_fx.png">MS_phasevels</tocitem>
+        <tocitem target="./funcs/MS_plot.html" image="$toolbox/matlab/icons/help_fx.png">MS_plot</tocitem>
+        <tocitem target="./funcs/MS_plot_trace.html" image="$toolbox/matlab/icons/help_fx.png">MS_plot_trace</tocitem>
+        <tocitem target="./funcs/MS_poisson.html" image="$toolbox/matlab/icons/help_fx.png">MS_poisson</tocitem>
+        <tocitem target="./funcs/MS_polyaverage.html" image="$toolbox/matlab/icons/help_fx.png">MS_polyaverage</tocitem>
+        <tocitem target="./funcs/MS_rot3.html" image="$toolbox/matlab/icons/help_fx.png">MS_rot3</tocitem>
+        <tocitem target="./funcs/MS_rotEuler.html" image="$toolbox/matlab/icons/help_fx.png">MS_rotEuler</tocitem>
+        <tocitem target="./funcs/MS_rotM.html" image="$toolbox/matlab/icons/help_fx.png">MS_rotM</tocitem>
+        <tocitem target="./funcs/MS_rotR.html" image="$toolbox/matlab/icons/help_fx.png">MS_rotR</tocitem>
+        <tocitem target="./funcs/MS_rotRandom.html" image="$toolbox/matlab/icons/help_fx.png">MS_rotRandom</tocitem>
+        <tocitem target="./funcs/MS_save.html" image="$toolbox/matlab/icons/help_fx.png">MS_save</tocitem>
+        <tocitem target="./funcs/MS_sphere.html" image="$toolbox/matlab/icons/help_fx.png">MS_sphere</tocitem>
+        <tocitem target="./funcs/MS_split_trace.html" image="$toolbox/matlab/icons/help_fx.png">MS_split_trace</tocitem>
+        <tocitem target="./funcs/MS_splitting_misfit.html" image="$toolbox/matlab/icons/help_fx.png">MS_splitting_misfit</tocitem>
+        <tocitem target="./funcs/MS_unwind_pm_90.html" image="$toolbox/matlab/icons/help_fx.png">MS_unwind_pm_90</tocitem>
+	</tocitem>
+       
+    </tocitem>
+</toc>

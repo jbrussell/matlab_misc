@@ -1,0 +1,214 @@
+MSAT Release Notes
+==================
+
+Version 1.1.1 - 12 December 2015
+--------------------------------
+
+This version of MSAT adds a handful of new feature alongside
+various bug fixes. Changes from 1.1.0 are:
+
+* Add MS_interpolate, which implements a new method for interpolating
+between elasticity matricies.
+
+* Add support for Anderson's (1961) TI parameterisation in
+MS_TI. 
+
+* Add a function (MS_rotRandom) to randomly rotate an elasticity
+matrix, the rotation is drawn from a uniform distribution such
+that avaraging many such elasticity matricies yields a isotropic
+version of the elasticity.
+
+* Add quartz, fayalite, and ice to the database of elasic constants.
+
+Bug fixes include:
+
+* Fix symmetry detection for hexagonal (VTI) elasticity
+in MS_axes. 
+
+* Fix a bug leading to errors in the norm of the triclinic
+part of an elasticity matrix in MS_decomp.
+
+We thank Andy Nowacki (Leeds) and Jack Walpole (Bristol) for locating these
+bugs.
+
+Version 1.1.0 - 1 July 2013
+---------------------------
+
+This version of MSAT focuses on the addition of new
+functionality to enable simple calculations involving
+shear wave splitting. It also includes several minor improvements,
+pieces of new functionality and bug fixes. Changes from 
+1.0.1 are:
+
+* New functions for simple analysis of shear wave splitting:
+
+** Splitting misfit calculation (see MS_splitting_misfit and 
+the new splitting_misfit example).
+
+** Functions to generate a test wavelet, apply shear wave splitting 
+operator(s), measure the resulting splitting, and plot the resulting 
+waveforms (See MS_make_trace, MS_split_trace, MS_measure_trace_splitting 
+and MS_plot_trace).
+
+** Add a new mode for MS_effective_splitting_N to use the above
+functions instead of the default Silver and Savage (1994) method.
+
+** Include the ability to plot measured splitting observations or 
+velocities alongside phase velocities from the elasticity in MS_plot 
+and MS_sphere.
+
+* Add a new function, MS_save, to write files in the formats
+supported by MS_load.
+
+* Allow MS_expand to handle the 9-element orthorhombic 
+case.
+
+* Add a new TI parameterization "global", which is like
+"panning" but without the approximation of eta=1.
+
+* Add options to produce nicer looking plots in MS_plot and 
+allow contour limits to be set in MS_sphere. Allow MS_plot to 
+show S1 and S2 phase velocity and allow user to select which
+subplots to include.
+
+* Include proper treatment of exactly parallel or perpendicular
+layers in the stack of operators in MS_effective_splitting_N.
+
+* Add new example showing the simulation of texture inheritance 
+in the lowermost mantle.
+
+* Numerous minor improvements to the documentation.
+
+
+We thank Andy Nowacki (Bristol), Alan Baird (Bristol), 
+Jenny Di Leo (Bristol) and Nagaya Takayoshi (University of Nagoya)
+for suggestions, ideas and bug fixes and reports.
+
+Version 1.0.1 - 5 November 2012
+-------------------------------
+
+This version of MSAT collects together several minor improvements 
+and minor bug fixes. Changes from version 1.0 are:
+
+* Fix the 'reverse' argument of MS_sphere and MS_plot. This optional 
+argument was inoperative.
+
+* Clarify the behaviour of MS_rotEuler such that the default action is
+to rotate the crystal and not the frame of reference. Add optional arguments
+'sense', 'passive' to allow previous behaviour (rotation of the frame of 
+reference)
+
+* Add a new function MS_TI_parameters which calculates a range of 
+values for VTI parameterisations given an elasticity matrix.
+
+* Extend MS_sphere to plot slowness surfaces using 'slowP', 'slowS1' 
+or 'slowS2' values for the mode argument.
+
+* Speed up MS_phasevels by a factor of two.
+
+* Expand the range of materials in MS_elasticDB
+
+* Include reference to the MSAT paper ("MSAT - A new toolkit for the 
+analysis of elastic and seismic anisotropy" Computers and Geosciences, 
+49, pp.81-90. doi:10.1016/j.cageo.2012.05.031) in the documentation.
+
+We thank Michele Zucali (University of Milan), Alan Baird (Bristol), 
+Jenny Di Leo (Bristol), Nagaya Takayoshi (University of Nagoya) and 
+an anonymous reviewer of the manuscript for contributing sugestions,
+bug reports, and code.
+
+Version 1.0 - 11 April 2012
+---------------------------
+
+This version of MSAT completes the intended initial feature 
+set and contains more detailed documentation. There are 
+also a few bug fixes, an API change (to MS_sphere's optional 
+arguments) and a couple of new features. All users are 
+encouraged to report outstanding bugs and request missing 
+features. Major changes from version 0.9 include:
+
+* The way MS_sphere handles optional 
+arguments has been made consistent with
+the rest of the code.
+
+* The MSAT reference guide has been written
+along with documentation on the various examples.
+These release notes now form part of the documentation
+available within the Matlab environment.
+
+* A new function, MS_TI, has been written to bring together 
+the various ways of creating a elasticity matrix with
+transverse isotropy from the various representations. MS_VTI 
+and MS_VTI2 now act as aliases to this function. Love's 
+parameterisation has been added.
+
+* Added new effective medium theories (for aligned cracks and 
+thin layering) to MS_effective medium. Fixed a bug in the 
+ellipsoidal inclusions case where the material parameters were 
+provided as velocities rather than elasticity matrices.
+
+* MS_phasevels has been made ~50% faster when called with 
+a very large number of directions. The function also rejects 
+invalid elasticity matrices (which, for example, can yield 
+imaginary velocities).
+
+Thanks to Alan Baird (Bristol) and Alex 
+Cote (UCL) for reporting bugs in and 
+suggesting improvements to version 0.9. 
+
+Version 0.9 - 24 November 2011
+------------------------------
+
+This is the public beta version of 
+MSAT with expanded documentation, 
+new examples, some bug fixes and 
+a few new functions. Users of version
+0.8 are advised to upgrade. All users 
+are encouraged to report bugs and 
+request missing features. Major changes
+from version 0.8 are:
+
+* The way MS_plot handles optional 
+arguments has been made consistent 
+with the rest of the code. New 
+optional arguments have been added. 
+
+* An MSAT quick start guide has been 
+added to the built-in and web based 
+documentation. The full user guide 
+has been started but is incomplete. 
+
+* Six usage examples have been provided. 
+They are located in subdirectories of 
+the distributed examples directory.
+
+* A new function, MS_poisson, has been 
+added to evaluate Poisson's ratio for 
+generally anisotropic materials as a 
+function of strain direction.
+
+* A new function, MS_VTI2, has been added 
+to generate an elasticity matrix with 
+hexagonal symmetry from the vp, vs, xi, 
+phi and eta parameters sometimes used 
+in global tomography.
+
+* Provide a work around for Matlab version 
+dependent compatibility issue in MS_checkC.
+
+Version 0.8 - 4 October 2011
+----------------------------
+
+This is the first version of MSAT 
+so there are no backwards incompatibility 
+issues.  However, this is an alpha 
+release and note that:
+
+* Elastic constant interpolation for 
+  trigonal symmetry does not work correctly.
+* Several examples are incomplete. 
+* Many of the functions are derived from 
+  older "CIJ_" code. Argument orders and 
+  details of what must be passed have been 
+  freely changed. Do read the documentation.
+
